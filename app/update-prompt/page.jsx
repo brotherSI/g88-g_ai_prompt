@@ -5,6 +5,18 @@ import {Suspense, useEffect, useState} from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Form from "@components/Form";
 
+const UpdatePromptPage =() =>{
+
+  return(
+    <Suspense fallback={<><p>Loading...</p></>}>
+      <UpdatePrompt />
+    </Suspense>
+  );
+};
+
+export default UpdatePromptPage;
+
+
 const UpdatePrompt = () => {
   const router = useRouter();
 
@@ -69,10 +81,3 @@ const UpdatePrompt = () => {
   );
 };
 
-  const SuspendedUpdatePrompt = () => (
-    <Suspense fallback = {<div>Loading...</div>}>
-      <UpdatePrompt />
-    </Suspense>
-  );
-
-export default SuspendedUpdatePrompt;
