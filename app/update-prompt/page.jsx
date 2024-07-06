@@ -5,17 +5,6 @@ import {Suspense, useEffect, useState} from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Form from "@components/Form";
 
-const UpdatePromptPage =() =>{
-
-  return(
-    <Suspense fallback={<><p>Loading...</p></>}>
-      <UpdatePrompt />
-    </Suspense>
-  );
-};
-
-export default UpdatePromptPage;
-
 
 const UpdatePrompt = () => {
   const router = useRouter();
@@ -69,7 +58,6 @@ const UpdatePrompt = () => {
 
       
       <Form
-    
         type='Edit'
         post={post}
         setPost={setPost}
@@ -81,3 +69,4 @@ const UpdatePrompt = () => {
   );
 };
 
+export default UpdatePrompt;
